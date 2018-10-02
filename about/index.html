@@ -291,7 +291,7 @@
 
   
 
-
+  
 
         </div>
         
@@ -589,6 +589,25 @@
 
 
 
+
+
+
+
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: 'b9304ac186cb7b4ada80',
+          clientSecret: 'f617c07a0741d653f4860950cbf6018b51ba3ce1',
+          repo: 'ashijiu.github.io',
+          owner: 'ashijiu',
+          admin: ['ashijiu'],
+          id: location.pathname,
+          distractionFreeMode: 'true'
+        })
+        gitalk.render('gitalk-container')           
+       </script>
 
 
 
