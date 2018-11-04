@@ -2,30 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://www.ashijiu.com/about/index.html</loc>
+    <loc>http://www.ashijiu.com/music/index.html</loc>
     
-    <lastmod>2018-10-03T10:47:43.253Z</lastmod>
+    <lastmod>2018-11-04T02:45:01.235Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.ashijiu.com/2018/09/18/gaokao/</loc>
     
-    <lastmod>2018-10-02T16:27:18.000Z</lastmod>
+    <lastmod>2018-10-03T12:56:06.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.ashijiu.com/about/index.html</loc>
+    
+    <lastmod>2018-10-03T12:56:06.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.ashijiu.com/categories/index.html</loc>
     
-    <lastmod>2018-10-02T16:27:18.000Z</lastmod>
+    <lastmod>2018-10-03T12:56:06.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.ashijiu.com/tags/index.html</loc>
     
-    <lastmod>2018-10-02T16:27:18.000Z</lastmod>
+    <lastmod>2018-10-03T12:56:06.000Z</lastmod>
     
   </url>
   
