@@ -304,8 +304,8 @@
           
 
   
-    <div id="gitalk-container"></div>
-
+    <div class="comments" id="comments">
+    </div>
   
 
 
@@ -466,12 +466,7 @@
 <span>Hosted by <a href="https://pages.coding.me" >Coding Pages</a></span>
 <!--
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
-
-
-
- <span class="post-meta-divider">|</span>
 
 
 
@@ -660,23 +655,27 @@
 
 
 
-
-
-
-  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-   <script type="text/javascript">
-        var gitalk = new Gitalk({
-          clientID: 'b9304ac186cb7b4ada80',
-          clientSecret: 'f617c07a0741d653f4860950cbf6018b51ba3ce1',
-          repo: 'ashijiu.github.io',
-          owner: 'ashijiu',
-          admin: ['ashijiu'],
-          id: location.pathname,
-          distractionFreeMode: 'true'
-        })
-        gitalk.render('gitalk-container')           
-       </script>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'iQDC03Vr309RN3rL7Sct4hOp-gzGzoHsz',
+        appKey: 'StISaigrem4x0itvnv3b8hRq',
+        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 
