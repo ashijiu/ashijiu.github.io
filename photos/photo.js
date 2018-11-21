@@ -1,6 +1,6 @@
 photo ={
     page: 1,
-    offset: 20,
+    offset: 50,
     init: function () {
         var that = this;
         $.getJSON("/photos/photoslist.json", function (data) {
