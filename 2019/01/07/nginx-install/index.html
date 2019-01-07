@@ -76,7 +76,7 @@
 
 
 
-  <meta name="keywords" content="CentOS,MariaDB," />
+  <meta name="keywords" content="CentOS,Nginx," />
 
 
 
@@ -87,18 +87,24 @@
 
 
 
-<meta name="description" content="前言什么是MariaDB?在日常工作的时候常常需要使用到数据库，这里简单记录一下如何在CentOS7下安装MariaDB。 MariaDB数据库管理系统是MySQL的一个分支，主要由开源社区在维护，采用GPL授权许可 MariaDB的目的是完全兼容MySQL，包括API和命令行，使之能轻松成为MySQL的代替品。在存储引擎方面，使用XtraDB来代替MySQL的InnoDB。 1、安装MariaD">
-<meta name="keywords" content="CentOS,MariaDB">
+<meta name="description" content="1、Nginx(engine x)是一个高性能的HTTP和反向代理服务，也是一个IMAP/POP3/SMTP服务。Nginx是由伊戈尔·赛索耶夫为俄罗斯访问量第二的Rambler.ru站点（俄文：Рамблер）开发的，第一个公开版本0.1.0发布于2004年10月4日。其将源代码以类BSD许可证的形式发布，因它的稳定性、丰富的功能集、示例配置文件和低系统资源的消耗而闻名。 2、Nginx的应用场">
+<meta name="keywords" content="CentOS,Nginx">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CentOS7如何安装MariaDB">
-<meta property="og:url" content="https://blog.ashijiu.com/2018/11/07/mariadb/index.html">
+<meta property="og:title" content="Centos7如何安装Nginx">
+<meta property="og:url" content="https://blog.ashijiu.com/2019/01/07/nginx-install/index.html">
 <meta property="og:site_name" content="阿十九">
-<meta property="og:description" content="前言什么是MariaDB?在日常工作的时候常常需要使用到数据库，这里简单记录一下如何在CentOS7下安装MariaDB。 MariaDB数据库管理系统是MySQL的一个分支，主要由开源社区在维护，采用GPL授权许可 MariaDB的目的是完全兼容MySQL，包括API和命令行，使之能轻松成为MySQL的代替品。在存储引擎方面，使用XtraDB来代替MySQL的InnoDB。 1、安装MariaD">
+<meta property="og:description" content="1、Nginx(engine x)是一个高性能的HTTP和反向代理服务，也是一个IMAP/POP3/SMTP服务。Nginx是由伊戈尔·赛索耶夫为俄罗斯访问量第二的Rambler.ru站点（俄文：Рамблер）开发的，第一个公开版本0.1.0发布于2004年10月4日。其将源代码以类BSD许可证的形式发布，因它的稳定性、丰富的功能集、示例配置文件和低系统资源的消耗而闻名。 2、Nginx的应用场">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-29T13:50:05.064Z">
+<meta property="og:image" content="https://markdown-1257690436.cos.ap-guangzhou.myqcloud.com/install_nginx.png">
+<meta property="og:image" content="https://markdown-1257690436.cos.ap-guangzhou.myqcloud.com/start_nginx.png">
+<meta property="og:image" content="https://markdown-1257690436.cos.ap-guangzhou.myqcloud.com/start_success.png">
+<meta property="og:image" content="https://markdown-1257690436.cos.ap-guangzhou.myqcloud.com/test_nginx.png">
+<meta property="og:image" content="https://markdown-1257690436.cos.ap-guangzhou.myqcloud.com/flower.gif">
+<meta property="og:updated_time" content="2019-01-07T13:10:28.490Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CentOS7如何安装MariaDB">
-<meta name="twitter:description" content="前言什么是MariaDB?在日常工作的时候常常需要使用到数据库，这里简单记录一下如何在CentOS7下安装MariaDB。 MariaDB数据库管理系统是MySQL的一个分支，主要由开源社区在维护，采用GPL授权许可 MariaDB的目的是完全兼容MySQL，包括API和命令行，使之能轻松成为MySQL的代替品。在存储引擎方面，使用XtraDB来代替MySQL的InnoDB。 1、安装MariaD">
+<meta name="twitter:title" content="Centos7如何安装Nginx">
+<meta name="twitter:description" content="1、Nginx(engine x)是一个高性能的HTTP和反向代理服务，也是一个IMAP/POP3/SMTP服务。Nginx是由伊戈尔·赛索耶夫为俄罗斯访问量第二的Rambler.ru站点（俄文：Рамблер）开发的，第一个公开版本0.1.0发布于2004年10月4日。其将源代码以类BSD许可证的形式发布，因它的稳定性、丰富的功能集、示例配置文件和低系统资源的消耗而闻名。 2、Nginx的应用场">
+<meta name="twitter:image" content="https://markdown-1257690436.cos.ap-guangzhou.myqcloud.com/install_nginx.png">
 
 
 
@@ -128,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="https://blog.ashijiu.com/2018/11/07/mariadb/"/>
+  <link rel="canonical" href="https://blog.ashijiu.com/2019/01/07/nginx-install/"/>
 
 
 
 
 
-  <title>CentOS7如何安装MariaDB | 阿十九</title>
+  <title>Centos7如何安装Nginx | 阿十九</title>
   
 
 
@@ -293,7 +299,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://blog.ashijiu.com/2018/11/07/mariadb/">
+    <link itemprop="mainEntityOfPage" href="https://blog.ashijiu.com/2019/01/07/nginx-install/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ashijiu">
@@ -310,7 +316,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">CentOS7如何安装MariaDB</h1>
+          <h1 class="post-title" itemprop="name headline">Centos7如何安装Nginx</h1>
         
 
         <div class="post-meta">
@@ -322,8 +328,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-07T21:35:02+08:00">
-                2018-11-07
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-07T20:55:28+08:00">
+                2019-01-07
               </time>
             
 
@@ -345,8 +351,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/MariaDB/" itemprop="url" rel="index">
-                    <span itemprop="name">MariaDB</span>
+                  <a href="/categories/Nginx/" itemprop="url" rel="index">
+                    <span itemprop="name">Nginx</span>
                   </a>
                 </span>
 
@@ -363,8 +369,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/11/07/mariadb/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/11/07/mariadb/" itemprop="commentCount"></span>
+                <a href="/2019/01/07/nginx-install/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/01/07/nginx-install/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -397,36 +403,40 @@
       
 
       
-        <h4 id="前言什么是MariaDB"><a href="#前言什么是MariaDB" class="headerlink" title="前言什么是MariaDB?"></a>前言什么是MariaDB?</h4><div class="note warning"><p>在日常工作的时候常常需要使用到数据库，这里简单记录一下如何在CentOS7下安装MariaDB。</p></div>
-<div class="note info"><p>MariaDB数据库管理系统是MySQL的一个分支，主要由开源社区在维护，采用GPL授权许可 MariaDB的目的是完全兼容MySQL，包括API和命令行，使之能轻松成为MySQL的代替品。在存储引擎方面，使用XtraDB来代替MySQL的InnoDB。</p></div>
-<h4 id="1、安装MariaDB"><a href="#1、安装MariaDB" class="headerlink" title="1、安装MariaDB"></a>1、安装MariaDB</h4><p>安装命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install mariadb mariadb-server</span><br></pre></td></tr></table></figure>
-<p>安装完成MariaDB，首先启动MariaDB<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start mariadb</span><br></pre></td></tr></table></figure></p>
-<p>设置开机启动<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable mariadb</span><br></pre></td></tr></table></figure></p>
-<p>接下来进行MariaDB的相关简单配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql_secure_installation</span><br></pre></td></tr></table></figure></p>
-<p>首先是设置密码，会提示先输入密码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Enter current password for root (enter for none):&lt;–初次运行直接回车</span><br></pre></td></tr></table></figure></p>
-<p>设置密码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Set root password? [Y/n] &lt;– 是否设置root用户密码，输入y并回车或直接回车 </span><br><span class="line">New password:&lt;– 设置root用户的密码 </span><br><span class="line">Re-enter new password: &lt;– 再输入一次你设置的密码</span><br></pre></td></tr></table></figure></p>
-<p>其他配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Remove anonymous users? [Y/n] &lt;– 是否删除匿名用户，回车</span><br><span class="line"></span><br><span class="line">Disallow root login remotely? [Y/n] &lt;–是否禁止root远程登录,回车,</span><br><span class="line"></span><br><span class="line">Remove test database and access to it? [Y/n] &lt;– 是否删除test数据库，回车</span><br><span class="line"></span><br><span class="line">Reload privilege tables now? [Y/n] &lt;– 是否重新加载权限表，回车</span><br></pre></td></tr></table></figure></p>
-<p>初始化MariaDB完成，接下来测试登录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -p </span><br><span class="line">Enter password:   &lt;– 当出现这个的时候输入你设置的密码</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Welcome to the MariaDB monitor.  Commands end with ; or \g.</span><br><span class="line">Your MariaDB connection id is 3</span><br><span class="line">Server version: 5.5.56-MariaDB MariaDB Server</span><br><span class="line"></span><br><span class="line">Copyright (c) 2000, 2017, Oracle, MariaDB Corporation Ab and others.</span><br><span class="line"></span><br><span class="line">Type &apos;help;&apos; or &apos;\h&apos; for help. Type &apos;\c&apos; to clear the current input statement.</span><br><span class="line"></span><br><span class="line">MariaDB [(none)]&gt;</span><br></pre></td></tr></table></figure>
-<p>当出现以上的提示就说明登录成功啦。</p>
-<h4 id="2、配置MariaDB的字符集"><a href="#2、配置MariaDB的字符集" class="headerlink" title="2、配置MariaDB的字符集"></a>2、配置MariaDB的字符集</h4><p>文件/etc/my.cnf<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/my.cnf</span><br></pre></td></tr></table></figure></p>
-<p>在[mysqld]标签下添加<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">init_connect=&apos;SET collation_connection = utf8_unicode_ci&apos;</span><br><span class="line"></span><br><span class="line">init_connect=&apos;SET NAMES utf8&apos;</span><br><span class="line"></span><br><span class="line">character-set-server=utf8</span><br><span class="line"></span><br><span class="line">collation-server=utf8_unicode_ci</span><br><span class="line"></span><br><span class="line">skip-character-set-client-handshake</span><br></pre></td></tr></table></figure></p>
-<p>文件/etc/my.cnf.d/client.cnf<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/my.cnf.d/client.cnf</span><br></pre></td></tr></table></figure></p>
-<p>在[client]中添加<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">default-character-set=utf8</span><br></pre></td></tr></table></figure></p>
-<p>文件 /etc/my.cnf.d/mysql-clients.cnf<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/my.cnf.d/mysql-clients.cnf</span><br></pre></td></tr></table></figure></p>
-<p>在[mysql]中添加<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">default-character-set=utf8</span><br></pre></td></tr></table></figure></p>
-<p> 全部配置完成，重启mariadb<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart mariadb</span><br></pre></td></tr></table></figure></p>
-<p>之后进入MariaDB查看字符集</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; show variables like &quot;%character%&quot;;show variables like &quot;%collation%&quot;;</span><br></pre></td></tr></table></figure>
-<p>显示为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">+--------------------------+----------------------------+ </span><br><span class="line">| Variable_name            | Value                      | </span><br><span class="line">+--------------------------+----------------------------+ </span><br><span class="line">| character_set_client     | utf8                       | </span><br><span class="line">| character_set_connection | utf8                       | </span><br><span class="line">| character_set_database   | utf8                       | </span><br><span class="line">| character_set_filesystem | binary                     | </span><br><span class="line">| character_set_results    | utf8                       | </span><br><span class="line">| character_set_server     | utf8                       | </span><br><span class="line">| character_set_system     | utf8                       | </span><br><span class="line">| character_sets_dir       | /usr/share/mysql/charsets/ | </span><br><span class="line">+--------------------------+----------------------------+ </span><br><span class="line">8 rows in set (0.00 sec)</span><br><span class="line"></span><br><span class="line">+----------------------+-----------------+ </span><br><span class="line">| Variable_name        | Value           | </span><br><span class="line">+----------------------+-----------------+ </span><br><span class="line">| collation_connection | utf8_unicode_ci | </span><br><span class="line">| collation_database   | utf8_unicode_ci | </span><br><span class="line">| collation_server     | utf8_unicode_ci | </span><br><span class="line">+----------------------+-----------------+ </span><br><span class="line">3 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure></p>
-<p>字符集配置完成。</p>
-<h4 id="3、添加用户，设置权限"><a href="#3、添加用户，设置权限" class="headerlink" title="3、添加用户，设置权限"></a>3、添加用户，设置权限</h4><p>创建用户命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt;create user username@localhost identified by &apos;password&apos;;</span><br></pre></td></tr></table></figure></p>
-<p>直接创建用户并授权的命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt;grant all on *.* to username@localhost indentified by &apos;password&apos;;</span><br></pre></td></tr></table></figure></p>
-<p>授予外网登陆权限<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt;grant all privileges on *.* to username@&apos;%&apos; identified by &apos;password&apos;; --外网访问需要打开端口</span><br></pre></td></tr></table></figure></p>
-<p>授予权限并且可以授权<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt;grant all privileges on *.* to username@&apos;hostname&apos; identified by &apos;password&apos; with grant option;</span><br></pre></td></tr></table></figure></p>
-<p>简单的用户和权限配置基本就这样了。  </p>
-<p>单独授予部分权限：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">需要将all privileges改为：select,insert,update,delete,create,drop,</span><br><span class="line">index,alter,grant,references,reload,shutdown,process,file（多个以逗号分隔）。</span><br></pre></td></tr></table></figure></p>
+        <h4 id="1、Nginx-engine-x"><a href="#1、Nginx-engine-x" class="headerlink" title="1、Nginx(engine x)"></a>1、<a href="https://baike.baidu.com/item/nginx/3817705?fr=aladdin" target="_blank" rel="noopener">Nginx</a>(engine x)</h4><p>是一个高性能的HTTP和反向代理服务，也是一个IMAP/POP3/SMTP服务。Nginx是由伊戈尔·赛索耶夫为俄罗斯访问量第二的Rambler.ru站点（俄文：Рамблер）开发的，第一个公开版本0.1.0发布于2004年10月4日。其将源代码以类BSD许可证的形式发布，因它的稳定性、丰富的功能集、示例配置文件和低系统资源的消耗而闻名。</p>
+<h4 id="2、Nginx的应用场景"><a href="#2、Nginx的应用场景" class="headerlink" title="2、Nginx的应用场景"></a>2、Nginx的应用场景</h4><p>1)反向代理 </p>
+<p>反向代理（Reverse Proxy）方式是指以代理服务器来接受internet上的连接请求，然后将请求转发给内部网络上的服务器，并将从服务器上得到的结果返回给internet上请求连接的客户端。</p>
+<p>2)负载均衡</p>
+<p>网站的访问量越来越大，服务器的服务模式也得进行相应的升级，比如分离出数据库服务器、分离出图片作为单独服务，这些是简单的数据的负载均衡，将压力分散到不同的机器上。</p>
+<p><em>nginx 的 upstream目前支持 5 种方式的分配</em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">轮询（默认） </span><br><span class="line">　每个请求按时间顺序逐一分配到不同的后端服务器，如果后端服务器down掉，能自动剔除。 </span><br><span class="line">weight </span><br><span class="line">　指定轮询几率，weight和访问比率成正比，用于后端服务器性能不均的情况。 </span><br><span class="line">ip_hash </span><br><span class="line">　每个请求按访问ip的hash结果分配，这样每个访客固定访问一个后端服务器，可以解决session的问题。  </span><br><span class="line">fair（第三方） </span><br><span class="line">　按后端服务器的响应时间来分配请求，响应时间短的优先分配。  </span><br><span class="line">url_hash（第三方）  </span><br><span class="line">  用HAproxy的loadbalance uri或者nginx的upstream_hash模块，都可以做到针对url进行哈希算法式的负载均衡转发。</span><br></pre></td></tr></table></figure>
+<p>3)HTTP服务器<br>Nginx本身也是一个静态资源的服务器，当只有静态资源的时候，就可以使用Nginx来做服务器。</p>
+<h4 id="3、安装过程"><a href="#3、安装过程" class="headerlink" title="3、安装过程"></a>3、安装过程</h4><h5 id="1-检查并安装所需的依赖软件"><a href="#1-检查并安装所需的依赖软件" class="headerlink" title="1.检查并安装所需的依赖软件　"></a>1.检查并安装所需的依赖软件　</h5><p> 1).gcc:nginx编译依赖gcc环境　　　<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# yum install gcc-c++</span><br></pre></td></tr></table></figure></p>
+<p> 2).pcre:(Perl Compatible Regular Expressions)是一个Perl库，包括 perl 兼容的正则表达式库。nginx的http模块使用pcre来解析正则表达式.　　　<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# yum install -y pcre pcre-devel</span><br></pre></td></tr></table></figure></p>
+<p> 3).zlib：该库提供了很多种压缩和解压缩的方式，nginx使用zlib对http包的内容进行gzip。　　　<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# yum install -y zlib zlib-devel</span><br></pre></td></tr></table></figure></p>
+<p> 4).openssl:一个强大的安全套接字层密码库，囊括主要的密码算法、常用的密钥和证书封装管理功能及SSL协议，并提供丰富的应用程序供测试或其它目的使用。nginx不仅支持http协议，还支持https（即在ssl协议上传输http）.　　　<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# yum install -y openssl openssl-devel</span><br></pre></td></tr></table></figure></p>
+<h5 id="2-下载nginx源码包"><a href="#2-下载nginx源码包" class="headerlink" title="2.下载nginx源码包"></a>2.下载nginx源码包</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# wget http://nginx.org/download/nginx-1.14.2.tar.gz</span><br></pre></td></tr></table></figure>
+<p>1.解压源码包<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# tar -zxvf nginx-1.14.2.tar.gz</span><br></pre></td></tr></table></figure></p>
+<p>2.创建 /var/temp目录，(编译的时候会用到)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# mkdir /var/temp</span><br></pre></td></tr></table></figure></p>
+<p>3.进入到nginx目录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# cd nginx-1.14.2</span><br></pre></td></tr></table></figure></p>
+<p>4.配置编译参数命令–(可以使用./configure –help查询详细参数)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">./configure \</span><br><span class="line">--prefix=/usr/local/nginx \</span><br><span class="line">--pid-path=/var/temp/nginx/nginx.pid \</span><br><span class="line">--lock-path=/var/lock/nginx.lock \</span><br><span class="line">--error-log-path=/var/log/nginx/error.log \</span><br><span class="line">--http-log-path=/var/log/nginx/access.log \</span><br><span class="line">--with-http_gzip_static_module \</span><br><span class="line">--http-client-body-temp-path=/var/temp/nginx/client \</span><br><span class="line">--http-proxy-temp-path=/var/temp/nginx/proxy \</span><br><span class="line">--http-fastcgi-temp-path=/var/temp/nginx/fastcgi \</span><br><span class="line">--http-uwsgi-temp-path=/var/temp/nginx/uwsgi \</span><br><span class="line">--http-scgi-temp-path=/var/temp/nginx/scgi</span><br></pre></td></tr></table></figure></p>
+<p>5.编译并安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# make &amp;&amp; make install</span><br></pre></td></tr></table></figure></p>
+<p><em>进入/usr/local/nginx检查是否存在conf、sbin、html文件夹，若存在则表示安装成功</em></p>
+<p><img src="https://markdown-1257690436.cos.ap-guangzhou.myqcloud.com/install_nginx.png" alt="install_nginx"></p>
+<h4 id="4、启动、基本使用"><a href="#4、启动、基本使用" class="headerlink" title="4、启动、基本使用"></a>4、启动、基本使用</h4><h6 id="1、启动"><a href="#1、启动" class="headerlink" title="1、启动"></a>1、启动</h6><p>进入启动目录<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# cd /usr/local/nginx/sbin</span><br></pre></td></tr></table></figure></p>
+<p>启动<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost sbin]#./nginx</span><br></pre></td></tr></table></figure></p>
+<p>查看是否启动<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -ef | grep nginx</span><br></pre></td></tr></table></figure></p>
+<p><em>若显示下图则为启动成功(master进程和worker进程)</em><br><img src="https://markdown-1257690436.cos.ap-guangzhou.myqcloud.com/start_nginx.png" alt="start_nginx"></p>
+<p>测试访问（如本机可访问外网访问不了，需要将本机80端口打开）</p>
+<p><img src="https://markdown-1257690436.cos.ap-guangzhou.myqcloud.com/start_success.png" alt="test"></p>
+<h6 id="2、停止、重启"><a href="#2、停止、重启" class="headerlink" title="2、停止、重启"></a>2、停止、重启</h6><p>等nginx进程处理任务完毕进行停止<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/nginx/sbin &amp;&amp; ./nginx -s quit</span><br></pre></td></tr></table></figure></p>
+<p>先停止再启动<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./nginx -s quit &amp;&amp; ./nginx</span><br></pre></td></tr></table></figure></p>
+<p>重新加载配置文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./nginx -s reload</span><br></pre></td></tr></table></figure></p>
+<p>测试配置文件是否正常<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./nginx -t</span><br></pre></td></tr></table></figure></p>
+<p>结果如下图则配置文件正常</p>
+<p><img src="https://markdown-1257690436.cos.ap-guangzhou.myqcloud.com/test_nginx.png" alt="test"></p>
+<p>nginx已经部署成功了，还有很多有趣的模块可以添加，待以后慢慢研究吧。</p>
+<p><img src="https://markdown-1257690436.cos.ap-guangzhou.myqcloud.com/flower.gif" alt="flower"></p>
 
       
     </div>
@@ -457,7 +467,7 @@
           
             <a href="/tags/CentOS/" rel="tag"><i class="fa fa-tag"></i> CentOS</a>
           
-            <a href="/tags/MariaDB/" rel="tag"><i class="fa fa-tag"></i> MariaDB</a>
+            <a href="/tags/Nginx/" rel="tag"><i class="fa fa-tag"></i> Nginx</a>
           
         </div>
       
@@ -470,15 +480,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/11/07/mariadb/" rel="next" title="CentOS7如何安装MariaDB">
+                <i class="fa fa-chevron-left"></i> CentOS7如何安装MariaDB
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/01/07/nginx-install/" rel="prev" title="Centos7如何安装Nginx">
-                Centos7如何安装Nginx <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -667,7 +677,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#前言什么是MariaDB"><span class="nav-number">1.</span> <span class="nav-text">前言什么是MariaDB?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1、安装MariaDB"><span class="nav-number">2.</span> <span class="nav-text">1、安装MariaDB</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、配置MariaDB的字符集"><span class="nav-number">3.</span> <span class="nav-text">2、配置MariaDB的字符集</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、添加用户，设置权限"><span class="nav-number">4.</span> <span class="nav-text">3、添加用户，设置权限</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、Nginx-engine-x"><span class="nav-number">1.</span> <span class="nav-text">1、Nginx(engine x)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、Nginx的应用场景"><span class="nav-number">2.</span> <span class="nav-text">2、Nginx的应用场景</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、安装过程"><span class="nav-number">3.</span> <span class="nav-text">3、安装过程</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-检查并安装所需的依赖软件"><span class="nav-number">3.1.</span> <span class="nav-text">1.检查并安装所需的依赖软件　</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-下载nginx源码包"><span class="nav-number">3.2.</span> <span class="nav-text">2.下载nginx源码包</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4、启动、基本使用"><span class="nav-number">4.</span> <span class="nav-text">4、启动、基本使用</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1、启动"><span class="nav-number">4.0.1.</span> <span class="nav-text">1、启动</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2、停止、重启"><span class="nav-number">4.0.2.</span> <span class="nav-text">2、停止、重启</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
