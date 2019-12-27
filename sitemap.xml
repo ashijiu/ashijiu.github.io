@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.ashijiu.com/music/index.html</loc>
+    
+    <lastmod>2019-12-27T07:24:21.368Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.ashijiu.com/2018/11/07/mariadb/</loc>
     
     <lastmod>2019-03-26T15:56:19.248Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>https://blog.ashijiu.com/about/index.html</loc>
     
     <lastmod>2019-03-24T16:47:27.229Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.ashijiu.com/music/index.html</loc>
-    
-    <lastmod>2018-11-04T10:06:40.000Z</lastmod>
     
   </url>
   
